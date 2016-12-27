@@ -1,0 +1,24 @@
+<h2>{{user.username}}'s Skills</h2>
+<form>
+  <label for="skill">Skill:</label>
+  <input type="text" id="currentSkill" name="skill" ng-model="currentSkill.skill" />
+  <label for="skill_years">Years Done:</label>
+  <input type="number" id="currentYears" name="skill_years" ng-model="currentSkill.skill_years" />
+  <button ng-click="submitCurrentSkill(user._id)">Submit</button>
+</form>
+<div>
+  <table class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th>Skill</th>
+        <th>Years Done</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="skill in skills">
+        <td>{{skill.skill}}</td>
+        <td>{{skill.skill_years}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
